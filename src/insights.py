@@ -7,22 +7,12 @@ def get_unique_job_types(path: str):
     return list(set(job_type))
 
 
-def filter_by_job_type(jobs, job_type):
-    """Filters a list of jobs by job_type
-
-    Parametersf
-    ----------
-    jobs : list
-        List of jobs to be filtered
-    job_type : str
-        Job type for the list filter
-
-    Returns
-    -------
-    list
-        List of jobs with provided job_type
-    """
-    return []
+def filter_by_job_type(jobs: list, job_type: str):
+    jobs_type = [
+        job for job in jobs
+        if job["job_type"] == job_type
+    ]
+    return jobs_type
 
 
 def get_unique_industries(path: str):
